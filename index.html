@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<p><b>Chuyển đổi giữa feet và meters</b></p>
+<select name="unit-convert" id="unit">
+    <option value = "0.305">Meters</option>
+    <option value = "3.279">Feet</option>
+</select>
+<input type="number" id="number-input"
+       oninput="document.getElementById('result').innerHTML = convertLength(this.value, document.getElementById('unit').value);"
+       onchange="document.getElementById('result').innerHTML = convertLength(this.value, document.getElementById('unit').value);">
+<p id="result">Kết quả hiển thị ở đây</p>
+<script src="js/app.js"></script>
+</body>
+</html>
